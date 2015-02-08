@@ -9,7 +9,12 @@ The easiest way to expose your morning schedule to the Imp agent server is to cr
 
 ### Creating a public Google Calendar
 
+(INSERT IMAGES HERE)
 
+### Creating a Google Developer API Key
+After navigating to https://console.developers.google.com/project, click on "Create Project." After agreeing to the terms of service, you will be taken to the project's dashboard. In the left sidebar, click on "APIs & auth."--> "APIs." Scroll or ctrl-f for "Calendar API, and click on the button that says "OFF" to its right in order to enable it. (INSERT IMAGE HERE)
+
+Then, in the left sidebar, click on Credentials, followed by "Create new Key" at the bottom of the page under "Public API access." Select "Server key", and in the text field that follows enter the string `0.0.0.0/0`. Click Create.
 
 http://i.imgur.com/6yY9EK2.png
 Inspiration for H Bridge design: http://letsmakerobots.com/content/motor-driver-idea
