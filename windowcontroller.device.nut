@@ -8,34 +8,46 @@
 // an NPN transistor that switches gate voltages between 0v and
 // 12v.
 
-M_plus <- hardware.pin9; // Transistors switching the (+) lead
-M_minus <- hardware.pin8; // Transistors switching the (-) lead
-State <- 1 // 0 means open, 1 means closed!
+M_plus <- hardware.pin9; // Transistor switching the (+) lead
+M_minus <- hardware.pin8; // Transistor switching the (-) lead
+State <- 1 // 0 means blinds are open, 1 means blinds are closed!
+//
 // configure H-bridge transistors to be digital outputs
 M_plus.configure(DIGITAL_OUT);
 M_minus.configure(DIGITAL_OUT);
 
 
+/**
+ * Configure H bridge to supply positive voltage to the motor.
+ */
 function motor_cw() {
-  // configure H bridge to supply positive voltage to the motor
 
   M_plus.write(1);
   M_minus.write(0);
 }
+
+/**
+ * Configure H bridge to supply nevative voltage to the motor.
+ */
 function motor_ccw() {
-  // configure H bridge to supply negative voltage to the motor
 
   M_plus.write(0);
   M_minus.write(1);
 
 }
 
+/**
+ * Turns off the window motor.
+ */
 function motor_off() {
   M_plus.write(0);
   M_minus.write(0);
 
 }
 
+/**
+ * Callback function for handling requests from the agent.
+ */
 function motorHandler(state) {
     server.log("[motorHandler] State is " + state);
 
@@ -61,6 +73,10 @@ function motorHandler(state) {
     }
 }
 
+/**
+ * Callback function for briefly trimming the position of the blinds one way
+ * or another.
+ */
 function trimHandler(direction) {
     if (direction > 0) {
         open_blinds(0.1, 1);
@@ -69,6 +85,11 @@ function trimHandler(direction) {
         close_blinds(0.1, 1);
     }
 }
+
+/**
+ * Function for opening the blinds for a set time. Function is state-aware,
+ * meaning it will not try to open already opened blinds, EXCEPT when trimming.
+ */
 function open_blinds(duration, trim=0) {
     if (State == 1 || trim) {
         motor_cw();
@@ -76,6 +97,10 @@ function open_blinds(duration, trim=0) {
         State = 0;
     }
 }
+/**
+ * Function for closing the blinds for a set time. Function is state-aware,
+ * meaning it will not try to open already opened blinds, EXCEPT when trimming.
+ */
 function close_blinds(duration, trim=0) {
     if (State == 0 || trim) {
         motor_ccw();
