@@ -1,9 +1,9 @@
 # Automated Window Blind Controller
 An Electric Imp-powered automated window blind controller, connected to Google Calendar and Weather Underground
 
-This project simply opens the blinds in my dorm room according to a morning "wake up" schedule programmed in Google Calendar, and closes the blinds according to the sunset time posted in the astronomy data from the Weather Underground API. Of course, I have also bookmarked the URL calls to opening, closing, and trimming the blinds on my cellphone and computer, so that overriding the automated control schedule is always a button press away.
+This project simply opens the blinds in my dorm room according to a morning "wake up" schedule programmed in Google Calendar, and closes the blinds according to the sunset time posted in the astronomy data from the Weather Underground API. Of course, I have also bookmarked the URL calls to opening, closing, and trimming the blinds on my cellphone and laptop, so that overriding the automated control schedule is always a button press away.
 
-Video in action:
+Video in action:      
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Lm1xPXeB1SU" target="_blank"><img src="http://img.youtube.com/vi/Lm1xPXeB1SU/0.jpg" 
 alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
 
