@@ -208,6 +208,11 @@ function checkWakeupTimeLoop() {
         // consensus on the actual time (I found them to be wildly different in
         // the 'minutes' field), but as a proof of concept, I thought that
         // avoiding this calibration would save time.
+        
+        // A better approach would be to calculate the difference in seconds between the time
+        // at which a new Calendar event is identified and the start time of that Calendar event,
+        // then create a wakeup() trigger for that many seconds to trigger a blind-opening event.
+        // This is already how the sunset blind-closer code works.
         if (wake_up_time != Next_Goal) {
             // Checks if GCal has found a new "next wake up time" event, AND
             // the old wake up time event is BEFORE the current time. 
