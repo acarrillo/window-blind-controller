@@ -32,23 +32,30 @@ Then, in the left sidebar, click on Credentials, followed by "Create new Key" at
 
 Google Calendar provides us with the wake-up times at which to open the blinds -- we then use Weather Underground to find the sunset time for our local area. To create a free Weather Underground API key, head to [http://www.wunderground.com/weather/api/](http://www.wunderground.com/weather/api/) and follow instructions for making a minimum bells-and-whistles account.
 
-After pasting your Weather Underground API key into the `WUNDERGROUND_KEY` at the head of [windowcontroller.agent.nut](https://github.com/acarrillo/window-blind-controller/blob/master/windowcontroller.agent.nut), fill the `ZIP_CODE` field as well. You can actually use other information besides zip code to identify your location. To borrow from the Electric Imp Weather Underground documentation:
+After pasting your Weather Underground API key into the `WUNDERGROUND_KEY` at the head of [windowcontroller.agent.nut](https://github.com/acarrillo/window-blind-controller/blob/master/windowcontroller.agent.nut), fill the `ZIP_CODE` field as well. You can actually use other information besides zip code to identify your location. To borrow from the [Electric Imp Weather Underground class](https://github.com/electricimp/reference/tree/master/webservices/wunderground) documentation, you can use any of the following input formats:
+
+- **Country/City:** "Australia/Sydney"
+- **US State/City:** "CA/Los_Altos"
+- **Lat,Lon:** "37.776289,-122.395234"
+- **Zipcode:** "94022"
+- **Airport code**: "SFO"
 
 
 ## Setup: Electrical
 
-http://i.imgur.com/6yY9EK2.png
+![alt text](http://i.imgur.com/6yY9EK2.png "Circuit schematic")
+
 Inspiration for H Bridge design: http://letsmakerobots.com/content/motor-driver-idea
 
 ## Setup: Mechanical
 
 Winch design:
-http://i.imgur.com/syJhmKE.png
-![alt text](http://i.imgur.com/W75srge.png "Getting Calendar ID")
+
+![alt text](http://i.imgur.com/syJhmKE.png "Getting Calendar ID")
 
 Winch closeup:
-![alt text](http://i.imgur.com/W75srge.png "Getting Calendar ID")
-https://lh6.googleusercontent.com/CNk5isRVL6eV5MgXxXoXpxpikmcJTm68sV4OgdVTmmlQi8Piaeht9b3KaDMisxKFBtFtyv-_K8g=w1256-h515
+![alt text](https://lh6.googleusercontent.com/CNk5isRVL6eV5MgXxXoXpxpikmcJTm68sV4OgdVTmmlQi8Piaeht9b3KaDMisxKFBtFtyv-_K8g=w1256-h515 "Getting Calendar ID")
+
 
 CAD files for winch: https://grabcad.com/library/splined-reel-for-winching-a-string-via-a-worm-gear-window-motor-system-1
 
