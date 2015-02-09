@@ -43,12 +43,15 @@ After pasting your Weather Underground API key into the `WUNDERGROUND_KEY` at th
 
 ## Setup: Electrical
 
+The circuit below is an H bridge circuit for driving a 12v motor in forward or reverse depending on the logic input on the two NPN base inputs from the Electric Imp.
 ![alt text](http://i.imgur.com/6yY9EK2.png "Circuit schematic")
+![alt text](http://i.imgur.com/kK7122n.jpg "Breadboard")
 
 Inspiration for H Bridge design: http://letsmakerobots.com/content/motor-driver-idea
 
 ## Setup: Mechanical
 
+The motor is a scrap [window motor](https://www.google.com/search?site=&tbm=isch&source=hp&biw=1280&bih=635&q=window+motor&oq=window+motor&gs_l=img.3..0l10.971.2062.0.2165.12.8.0.1.1.0.216.787.2j3j1.6.0.msedr...0...1ac.1.61.img..5.7.790._NM5K_zDsE0#tbm=isch&q=car+window+motor&revid=881154322) with a custom 3d-printed winch press-fit onto its output shaft. 
 Winch design:
 
 ![alt text](http://i.imgur.com/syJhmKE.png "Getting Calendar ID")
