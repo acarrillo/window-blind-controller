@@ -43,23 +43,28 @@ After pasting your Weather Underground API key into the `WUNDERGROUND_KEY` at th
 
 ## Setup: Electrical
 
-The circuit below is an H bridge circuit for driving a 12v motor in forward or reverse depending on the logic input on the two NPN base inputs from the Electric Imp.
+The circuit below is an H bridge circuit for driving a 12v motor in forward or reverse, depending on the logic input on the two NPN base inputs from the Electric Imp. Driving both NPN inputs to the same voltage level will cause the motor to stop, and applying a logic "on" to one and "off" to the other will energize the motor in one direction or another.
+
 ![alt text](http://i.imgur.com/6yY9EK2.png "Circuit schematic")
 ![alt text](http://i.imgur.com/kK7122n.jpg "Breadboard")
+![alt text](http://i.imgur.com/hWy6xdu.jpg "Winch")
 
 Inspiration for H Bridge design: http://letsmakerobots.com/content/motor-driver-idea
 
 ## Setup: Mechanical
 
 The motor is a scrap [window motor](https://www.google.com/search?site=&tbm=isch&source=hp&biw=1280&bih=635&q=window+motor&oq=window+motor&gs_l=img.3..0l10.971.2062.0.2165.12.8.0.1.1.0.216.787.2j3j1.6.0.msedr...0...1ac.1.61.img..5.7.790._NM5K_zDsE0#tbm=isch&q=car+window+motor&revid=881154322) with a custom 3d-printed winch press-fit onto its output shaft. 
+
 Winch design:
 
-![alt text](http://i.imgur.com/syJhmKE.png "Getting Calendar ID")
-
+![alt text](http://i.imgur.com/syJhmKE.png "Winch Design")
 Winch closeup:
-![alt text](https://lh6.googleusercontent.com/CNk5isRVL6eV5MgXxXoXpxpikmcJTm68sV4OgdVTmmlQi8Piaeht9b3KaDMisxKFBtFtyv-_K8g=w1256-h515 "Getting Calendar ID")
-
+![alt text](http://i.imgur.com/SDHnLFY.jpg "Winch Closeup")
 
 CAD files for winch: https://grabcad.com/library/splined-reel-for-winching-a-string-via-a-worm-gear-window-motor-system-1
 
+The rigging is designed to take complete advantage of features that were already present in the manually-controlled window blind system. From the winch, the string rises, passes through a (duct-taped in place) loop that apparently used to hold a curtain-pushing stick, knots around the first loop of the near edge of the moving curtain, passes through the last loop of the curtain (which is static), and terminates at a water bottle counterweight.
+
+
+![alt text](http://i.imgur.com/wPJKgsb.jpg "Winch Closeup")
 
