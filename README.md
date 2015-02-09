@@ -5,7 +5,7 @@ This project simply opens the blinds in my dorm room according to a morning "wak
 
 **Video in action:**      
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=Lm1xPXeB1SU" target="_blank"><img src="http://img.youtube.com/vi/Lm1xPXeB1SU/0.jpg" 
-alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
+alt="IMAGE ALT TEXT HERE" width="640" height="480" border="10" /></a>
 
 The automated curtain opening on scheduled Calendar time is stable, but sunset closing is not. Will fix sunset closing as soon as I have time!
 
