@@ -291,7 +291,7 @@ function date_cmp(dt1, dt2) {
  * return the number of seconds until the next sunset.
  */
 function get_seconds_til(timenow, sunset_data) {
-    local datetime = split(dt2,"-:T");
+    local datetime = split(timenow,"-:T");
     local hour_now = datetime[3].tointeger();
     local minute_now = datetime[4].tointeger();
 
@@ -300,7 +300,7 @@ function get_seconds_til(timenow, sunset_data) {
     // about that long for it to get sufficiently dark to warrant closing the
     // blinds.
     local hour_diff = sunset_data.hour.tointeger() - hour_now;
-    local mins_diff = abs(sunset_data.minute.tointeger() - minute_now);
+    local mins_diff = sunset_data.minute.tointeger() - minute_now;
     local seconds_diff = 60*60*hour_diff + 60*mins_diff + 60*30;
 
     return seconds_diff;
